@@ -1,7 +1,7 @@
-#' Generating abstract art from k nearest neighbors algorithm
+#' Generating abstract art from logistic regression
 #'
-#' @param colors a vector of color hex codes
-#' @param k number of neighbors to check
+#' @param color1 first color hexcode
+#' @param color2 second color hexcode
 #' @param n number of generated observations for the test data
 #' @param resolution resolution of generated image
 #' @param rdist function for generating values (i.e. runif, rnorm, rexp)
@@ -9,27 +9,27 @@
 #'
 #' @return a ggplot of abstract art
 #'
-#' @import neighbr
 #' @import ggplot2
 #'
 #' @export
-canvasknn <- function(colors, k = 3, n = 100, resolution = 30, rdist, ...) {
+canvaslogreg <- function(color1, color2, n = 100, resolution = 30, rdist, ...) {
   train <- data.frame(
     x = rdist(n, ...),
     y = rdist(n, ...),
-    color = sample(colors, n, replace = T)
+    color = sample(c(0, 1), 100, replace = T)
   )
 
   sequence <- seq(0, resolution, by = 1)
   canvas <- expand.grid(sequence, sequence)
-  names(test) <- c("x", "y")
+  names(canvas) <- c("x", "y")
 
-  model <- knn(train, canvas, k = k, categorical_target = "color", comparison_measure="euclidean")
-  canvas$colors <- model$test_set_scores$categorical_target
+  model <- glm(color~., data = train, family = binomial(link = "logit"))
+
+  canvas$colors <- predict(model, test, type="response")
 
   plot <- ggplot(data = canvas, mapping = aes(x = x, y = y, fill = colors)) +
     geom_raster(interpolate = TRUE, show.legend = FALSE) +
-    scale_fill_manual(values = colors) +
+    scale_fill_gradient(low = color1, high = color2) +
     theme_void()
 
   return(plot)
