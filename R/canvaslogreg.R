@@ -14,9 +14,9 @@
 #' @export
 canvaslogreg <- function(color1, color2, n = 100, resolution = 30, rdist, ...) {
   train <- data.frame(
-    x = rdist(n, ...),
-    y = rdist(n, ...),
-    color = sample(c(0, 1), 100, replace = T)
+    x = as.numeric(rdist(n, ...)),
+    y = as.numeric(rdist(n, ...)),
+    color = factor(sample(c(0, 1), 100, replace = T))
   )
 
   sequence <- seq(0, resolution, by = 1)
