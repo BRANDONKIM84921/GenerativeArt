@@ -25,7 +25,7 @@ canvaslogreg <- function(color1, color2, n = 100, resolution = 30, rdist, ...) {
 
   model <- glm(color~., data = train, family = binomial(link = "logit"))
 
-  canvas$colors <- predict(model, test, type="response")
+  canvas$colors <- predict(model, canvas, type="response")
 
   plot <- ggplot(data = canvas, mapping = aes(x = x, y = y, fill = colors)) +
     geom_raster(interpolate = TRUE, show.legend = FALSE) +

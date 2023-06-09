@@ -48,17 +48,17 @@ GenerativeArt::canvasca(myColors, n = 200, iterations = 40, probability = 0.65, 
 ## **canvasknn** - K Nearest Neighbors
 
 ```{r}
-
+GenerativeArt::canvasknn(myColors, k = 5, n = 100, resolution = 10, rbinom, size = 30, prob = 0.5)
 ```
 
 ## **canvaslogreg** - Logistic Regression
 
 ```{r}
-
+GenerativeArt::canvaslogreg(color1 = myColors[1], color2 = myColors[2], n = 500, resolution = 500, rexp, rate = 3)
 ```
 
 ## **canvastree** - Decision Tree
 
 ```{r}
-
+GenerativeArt::canvastree(myColors, n = 100, resolution = 100, runif, 0, 100)
 ```

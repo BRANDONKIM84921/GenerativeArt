@@ -8,12 +8,12 @@ This function creates generative art using cellular automation. The only paramet
 
 ## **canvasknn** - K Nearest Neighbors
 
-[insert description]
+This function creates generative art using the KNN algorithm. The user needs to input a vector of colors, the number of observations that the model is trained on, the outputted resolution of the generative art, the number of neighbors the model checks, and the distribution in which the values of the training dataset is generated from. Each observation in the training dataset will be randomly selected one of the colors from the vector of colors. This will then train a model based off the training data, and will predict the color that each pair of integers in a resolution*resolution grid will become. 
 
 ## **canvaslogreg** - Logistic Regression
 
-[insert description]
+This function creates generative art using logistic regression. The user needs to input a two colors, the number of observations that the model is trained on, the outputted resolution of the generative art, and the distribution in which the values of the training dataset is generated from. Each observation in the training dataset will be randomly selected one of the two colors. This will then train a model based off the training data, and will predict the color that each pair of integers in a resolution*resolution grid will become. Since logistic regression is primarily used with binary classification, we made the choice of only having 2 color parameters. 
 
 ## **canvastree** - Decision Tree
 
-[insert description]
+This function creates generative art using a decision tree. The user needs to input a vector of colors, the number of observations that the model is trained on, the outputted resolution of the generative art, and the distribution in which the values of the training dataset is generated from. Each observation in the training dataset will be randomly selected one of the colors from the vector of colors. This will then train a model based off the training data, and will predict the color that each pair of integers in a resolution*resolution grid will become. 

@@ -2,7 +2,7 @@
 % Please edit documentation in R/canvasca.R
 \name{canvasca}
 \alias{canvasca}
-\title{Generating abstract art from cellular automata}
+\title{Generating abstract art from cellular automation}
 \usage{
 canvasca(colors, n = 100, iterations = 20, probability = 0.5, conway = FALSE)
 }
@@ -21,5 +21,5 @@ canvasca(colors, n = 100, iterations = 20, probability = 0.5, conway = FALSE)
 a ggplot of abstract art
 }
 \description{
-Generating abstract art from cellular automata
+Generating abstract art from cellular automation
 }
