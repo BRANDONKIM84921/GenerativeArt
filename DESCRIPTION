@@ -1,10 +1,12 @@
 Package: GenerativeArt
-Title: What the Package Does (One Line, Title Case)
+Title: A Variety of Generative Art Functions
 Version: 0.0.0.9000
 Authors@R: 
     person("Brandon", "Kim", , "bkim89@calpoly.edu", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+    person("Sam", "Todd", , "stodd03@calpoly.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Tools to help create generative art using different algorithms. Some of the functions use methods such as cellaular automation, k nearset neighbors, logistic regression, and decision trees.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
