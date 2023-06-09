@@ -1,0 +1,64 @@
+---
+title: "GenerativeArt Examples"
+author: "Aiden Kelly, Brandon Kim, Sam Todd"
+format: 
+  html:
+    self-contained: true
+    code-tools: true
+    code-overflow: wrap
+    toc: true
+editor: source
+execute: 
+  error: true
+  echo: true
+  message: false
+  warning: false
+---
+
+# Setup
+
+## Load Packages
+
+```{r}
+library(GenerativeArt)
+```
+
+# Examples
+
+## **canvasca** - Cellular Automation
+
+### Setup
+
+```{r}
+myColors <- c("#9D7161", "#0C2C3C")
+```
+
+### My Cellular Automation Algorithm
+
+```{r}
+GenerativeArt::canvasca(myColors, n = 150, iterations = 30, probability = 0.35)
+```
+
+## Conway's Game of Life Algorithm
+
+```{r}
+GenerativeArt::canvasca(myColors, n = 200, iterations = 40, probability = 0.65, conway = TRUE)
+```
+
+## **canvasknn** - K Nearest Neighbors
+
+```{r}
+
+```
+
+## **canvaslogreg** - Logistic Regression
+
+```{r}
+
+```
+
+## **canvastree** - Decision Tree
+
+```{r}
+
+```
